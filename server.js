@@ -6,8 +6,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.static("public"));
 app.use("/", (req, res) => {
-  res.render("home", { title: "Home", url: "http://localhost:3000" });
+  res.render("home");
 });
 
 // set Template engine
